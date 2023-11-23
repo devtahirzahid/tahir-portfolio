@@ -1,11 +1,14 @@
-'use client';
+// RootLayout.tsx
 
-import { Inter } from 'next/font/google';
 import './globals.css';
-import Navbar from './components/Navbar';
-import { ThemeProvider } from 'next-themes';
+import type { Metadata } from 'next';
+import ThemeRegistry from './components/ThemeRegistry/ThemeRegistry';
+import ResponsiveAppBar from './components/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+export const metadata: Metadata = {
+  title: 'Material UI built with nextjs app router and typescript',
+  description: 'Material UI nextjs example',
+};
 
 export default function RootLayout({
   children,
@@ -14,11 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <ThemeProvider enableSystem={true} attribute='class'>
-          <Navbar />
-          {children}
-        </ThemeProvider>
+      <body>
+        <ThemeRegistry>
+          <ResponsiveAppBar />
+          <div>{children}</div>
+        </ThemeRegistry>
       </body>
     </html>
   );
