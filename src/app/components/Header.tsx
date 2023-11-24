@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import { ThemeToggle } from '../context/ThemeToogle/ThemeToogle';
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Projects', 'Experience', 'Education'];
 
 function ResponsiveAppBar() {
   return (
@@ -27,7 +27,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            WOW
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
             {pages.map((page) => (

@@ -1,20 +1,10 @@
 'use client';
 
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import {
-  Box,
-  Button,
-  CardActionArea,
-  CardActions,
-  Container,
-} from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+
 export default function MultiActionAreaCard() {
-  const theme = useTheme();
-  console.log(theme);
   return (
     <Container>
       <Box
