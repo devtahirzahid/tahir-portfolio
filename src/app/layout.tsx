@@ -20,7 +20,7 @@ export default function RootLayout({
       <body>
         <ThemeRegistry>
           <ResponsiveAppBar />
-          <div>{children}</div>
+          <main>{children}</main>
         </ThemeRegistry>
       </body>
     </html>
