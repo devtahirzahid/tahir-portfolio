@@ -27,7 +27,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            WOW
+            Tahmina Logo
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
             {pages.map((page) => (
