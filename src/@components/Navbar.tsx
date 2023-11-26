@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 
@@ -10,7 +10,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -19,16 +18,19 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Grid } from '@mui/material';
 
-const pages = ['Home', 'About', 'Projects'];
+const pages = [
+  { title: 'Home', route: '/' },
+  { title: 'About', route: '/about' },
+  { title: 'Projects', route: '/projects' },
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+// ... (other imports)
+
 export default function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
+  const router = useRouter();
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -37,8 +39,9 @@ export default function Navbar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (route: string) => {
     setAnchorElNav(null);
+    router.push(`${route}`);
   };
 
   const handleCloseUserMenu = () => {
@@ -47,20 +50,31 @@ export default function Navbar() {
 
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
-  const pathname = usePathname();
-  const [navbar, setNavbar] = useState(false);
+
+  useEffect(() => {
+    // Save the current theme preference to localStorage
+    localStorage.setItem('theme', currentTheme ?? 'system');
+  }, [currentTheme]);
+
+  // Retrieve the theme preference from localStorage, default to 'system' if not set
+  const savedTheme = localStorage.getItem('theme') || 'system';
+
+  useEffect(() => {
+    // Set the theme based on the retrieved preference
+    setTheme(savedTheme);
+  }, [savedTheme, setTheme]);
+
   return (
-    <AppBar position='static'>
+    <AppBar position='static' sx={{ backgroundColor: 'black' }}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Typography
             variant='h6'
-            noWrap
             component='a'
-            href='#app-bar-with-responsive-menu'
+            href='/'
             sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              mr: 5,
+              display: { xs: 'flex', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -75,11 +89,11 @@ export default function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.title}
+                onClick={() => handleCloseNavMenu(page.route)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.title}
               </Button>
             ))}
           </Box>
@@ -94,13 +108,13 @@ export default function Navbar() {
               {currentTheme === 'dark' ? (
                 <Tooltip title='Switch Mode'>
                   <IconButton onClick={() => setTheme('light')} sx={{ p: 0 }}>
-                    <RiSunLine size={25} color='black' />
+                    <RiSunLine size={25} color='white' />
                   </IconButton>
                 </Tooltip>
               ) : (
                 <Tooltip title='Switch Mode'>
                   <IconButton onClick={() => setTheme('dark')} sx={{ p: 0 }}>
-                    <RiMoonFill size={25} />
+                    <RiMoonFill size={25} color='white' />
                   </IconButton>
                 </Tooltip>
               )}{' '}
