@@ -1,14 +1,7 @@
-import type { Metadata } from 'next';
+'use client';
+import Navbar from '@components/@components/Navbar';
 import './globals.css';
-
-// Providers Import
-import Providers from './providers';
-import ThemeSwitcher from './ThemeSwitcher';
-
-export const metadata: Metadata = {
-  title: "Tahir's Portfolio",
-  description: 'Made by Tahir',
-};
+import { ThemeProvider } from 'next-themes';
 
 export default function RootLayout({
   children,
@@ -17,11 +10,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>
-        <Providers>
-          <ThemeSwitcher />
+      {/* <head /> */}
+      <body className='dark:bg-stone-900'>
+        <ThemeProvider enableSystem={true} attribute='class'>
+          <Navbar />
           {children}
-        </Providers>
+          {/* <Footer /> */}
+        </ThemeProvider>
       </body>
     </html>
   );

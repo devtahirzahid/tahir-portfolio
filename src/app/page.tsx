@@ -1,3 +1,5 @@
+import { Box } from '@mui/material';
+
 export default function Home() {
-  return <div className='dark:text-red-900'>Hello world!</div>;
+  return <Box>Hello World</Box>;
 }
