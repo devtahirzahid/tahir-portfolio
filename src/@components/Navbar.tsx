@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 
@@ -24,8 +24,6 @@ const pages = [
   { title: 'Projects', route: '/projects' },
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-// ... (other imports)
 
 export default function Navbar() {
   const router = useRouter();
@@ -52,15 +50,12 @@ export default function Navbar() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   useEffect(() => {
-    // Save the current theme preference to localStorage
     localStorage.setItem('theme', currentTheme ?? 'system');
   }, [currentTheme]);
 
-  // Retrieve the theme preference from localStorage, default to 'system' if not set
   const savedTheme = localStorage.getItem('theme') || 'system';
 
   useEffect(() => {
-    // Set the theme based on the retrieved preference
     setTheme(savedTheme);
   }, [savedTheme, setTheme]);
 
