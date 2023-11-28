@@ -5,26 +5,9 @@ import Container from '@mui/material/Container';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
-// import Main from '@components/@components/dashboard/Main';
 import MainFeaturedPost from '@components/@components/dashboard/MainFeaturedPost';
 import FeaturedPost from '@components/@components/dashboard/FeaturedPost';
 import Sidebar from '@components/@components/dashboard/Sidebar';
-
-// gag
-
-// const sections = [
-//   { title: 'Technology', url: '#' },
-//   { title: 'Design', url: '#' },
-//   { title: 'Culture', url: '#' },
-//   { title: 'Business', url: '#' },
-//   { title: 'Politics', url: '#' },
-//   { title: 'Opinion', url: '#' },
-//   { title: 'Science', url: '#' },
-//   { title: 'Health', url: '#' },
-//   { title: 'Style', url: '#' },
-//   { title: 'Travel', url: '#' },
-// ];
 
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
