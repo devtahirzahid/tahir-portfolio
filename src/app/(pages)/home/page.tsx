@@ -11,6 +11,8 @@ import MainFeaturedPost from '@components/@components/dashboard/MainFeaturedPost
 import FeaturedPost from '@components/@components/dashboard/FeaturedPost';
 import Sidebar from '@components/@components/dashboard/Sidebar';
 
+// gag
+
 // const sections = [
 //   { title: 'Technology', url: '#' },
 //   { title: 'Design', url: '#' },
