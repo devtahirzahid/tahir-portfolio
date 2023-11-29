@@ -55,9 +55,9 @@ const sidebar = {
     { title: 'April 1999', url: '#' },
   ],
   social: [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'Twitter', icon: TwitterIcon },
-    { name: 'Facebook', icon: FacebookIcon },
+    { name: 'GitHub Temp', icon: GitHubIcon },
+    { name: 'Twitter Temp', icon: TwitterIcon },
+    { name: 'Facebook Temp', icon: FacebookIcon },
   ],
 };
 
