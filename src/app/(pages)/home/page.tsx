@@ -21,7 +21,7 @@ const mainFeaturedPost = {
 const featuredPosts = [
   {
     title: 'Featured post',
-    date: 'Nov 12',
+    date: 'Nov 13',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
     image: 'https://source.unsplash.com/random?wallpapers',
