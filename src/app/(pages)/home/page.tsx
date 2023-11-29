@@ -20,8 +20,8 @@ const mainFeaturedPost = {
 
 const featuredPosts = [
   {
-    title: 'Featured post',
-    date: 'Nov 12',
+    title: 'Featured post title',
+    date: 'Nov 13',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
     image: 'https://source.unsplash.com/random?wallpapers',
@@ -29,7 +29,7 @@ const featuredPosts = [
   },
   {
     title: 'Post title',
-    date: 'Nov 11',
+    date: 'Nov 12',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
     image: 'https://source.unsplash.com/random?wallpapers',
@@ -55,9 +55,9 @@ const sidebar = {
     { title: 'April 1999', url: '#' },
   ],
   social: [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'Twitter', icon: TwitterIcon },
-    { name: 'Facebook', icon: FacebookIcon },
+    { name: 'GitHub Temp', icon: GitHubIcon },
+    { name: 'Twitter Temp', icon: TwitterIcon },
+    { name: 'Facebook Temp', icon: FacebookIcon },
   ],
 };
 
