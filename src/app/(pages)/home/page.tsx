@@ -20,7 +20,7 @@ const mainFeaturedPost = {
 
 const featuredPosts = [
   {
-    title: 'Featured post',
+    title: 'Featured post title',
     date: 'Nov 13',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
