@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
 
 export default function About() {
-  return <Box>About PAge</Box>;
+  return <Box>Lets start the about page design</Box>;
 }
