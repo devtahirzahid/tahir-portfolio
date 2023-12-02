@@ -4,7 +4,7 @@ export default function About() {
   return (
     <Box>
       Lets start designing this page from scratch{' '}
-      <Typography variant='h1'>ala re ala</Typography>
+      <Typography variant='h1'>Sample Description</Typography>
     </Box>
   );
 }
