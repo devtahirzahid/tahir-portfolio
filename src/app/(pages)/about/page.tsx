@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from '@mui/material';
 
 export default function About() {
   return (
-    <Grid container>
+    <Grid container padding={'1rem'}>
       Lets start designing this page from scratch{' '}
       <Grid item xs={12} md={12} lg={12}>
         <Typography variant='body1'>Sample Description </Typography>
