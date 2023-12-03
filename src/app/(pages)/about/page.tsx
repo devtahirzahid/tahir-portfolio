@@ -1,10 +1,18 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
 export default function About() {
   return (
-    <Box>
+    <Grid container>
       Lets start designing this page from scratch{' '}
-      <Typography variant='h1'>Sample Description</Typography>
-    </Box>
+      <Grid item xs={12} md={12} lg={12}>
+        <Typography variant='body1'>Sample Description </Typography>
+      </Grid>
+      <Grid item xs={6} md={6} lg={6}>
+        <Typography variant='body2'>Sample Description </Typography>
+      </Grid>
+      <Grid item xs={6} md={6} lg={6}>
+        <Typography variant='body2'>Sample Description </Typography>
+      </Grid>
+    </Grid>
   );
 }

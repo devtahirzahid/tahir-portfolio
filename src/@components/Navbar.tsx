@@ -50,10 +50,10 @@ export default function Navbar() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   useEffect(() => {
-    localStorage.setItem('theme', currentTheme ?? 'system');
+    localStorage?.setItem('theme', currentTheme ?? 'system');
   }, [currentTheme]);
 
-  const savedTheme = localStorage.getItem('theme') || 'system';
+  const savedTheme = localStorage?.getItem('theme') || 'system';
 
   useEffect(() => {
     setTheme(savedTheme);
