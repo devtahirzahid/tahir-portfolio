@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     // need to redesign this
     <html lang='en'>
-      <body className='dark:bg-stone-900'>
+      <body>
         <ThemeProvider enableSystem={true} attribute='class'>
           <div
             style={{
