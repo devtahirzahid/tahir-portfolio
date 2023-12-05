@@ -10,6 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    // need to redesign this
     <html lang='en'>
       <body className='dark:bg-stone-900'>
         <ThemeProvider enableSystem={true} attribute='class'>
