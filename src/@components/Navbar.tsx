@@ -20,7 +20,7 @@ import { Grid } from '@mui/material';
 
 const pages = [
   { title: 'Home', route: '/' },
-  { title: 'About', route: '/about' },
+  { title: 'Contact', route: '/contact' },
   { title: 'Projects', route: '/projects' },
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
