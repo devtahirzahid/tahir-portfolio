@@ -9,6 +9,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Rebuild this component
   return (
     <html lang='en'>
       <body>
