@@ -13,6 +13,7 @@ export default function RootLayout({
   // Using sneat configs // help from errands
   // still no progress
   // still no progress
+  // still no progress
   return (
     // need to redesign this
     <html lang='en'>
