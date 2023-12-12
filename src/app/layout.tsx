@@ -11,12 +11,6 @@ export default function RootLayout({
 }) {
   // Rebuild this component
   // Using sneat configs // help from errands
-  // still no progress
-  // still no progress
-  // still no progress
-  // still no progress
-  // still no progress
-  // still no progress
   return (
     <html lang='en'>
       <body>
