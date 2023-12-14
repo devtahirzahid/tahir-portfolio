@@ -9,9 +9,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Rebuild this component
-  // Rebuild this component
-  // Rebuild this component
   // Using sneat configs // help from errands
   return (
     <html lang='en'>
