@@ -10,6 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   // Using sneat configs // help from errands
+  // Using sneat configs // help from errands
   return (
     <html lang='en'>
       <body>
