@@ -11,6 +11,8 @@ export default function RootLayout({
 }) {
   // Using sneat configs // help from errands
   // Using sneat configs // help from errands
+  // Using sneat configs // help from errands
+  // Using sneat configs // help from errands
   return (
     <html lang='en'>
       <body>
