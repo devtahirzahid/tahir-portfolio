@@ -32,7 +32,7 @@ export default function About() {
         <Card sx={{ my: 2 }}>
           <CardContent>
             <Typography variant='h5' component='div'>
-              Card Title
+              Card Titles
             </Typography>
             <Typography variant='body2' color='text.secondary'>
               Some content for the card.
